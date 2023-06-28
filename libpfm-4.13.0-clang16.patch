@@ -1,0 +1,25 @@
+diff -up libpfm-4.13.0/lib/pfmlib_common.c.omv~ libpfm-4.13.0/lib/pfmlib_common.c
+--- libpfm-4.13.0/lib/pfmlib_common.c.omv~	2023-06-28 21:24:27.359351745 +0200
++++ libpfm-4.13.0/lib/pfmlib_common.c	2023-06-28 21:25:23.361620268 +0200
+@@ -1906,7 +1906,7 @@ pfmlib_pmu_validate_encoding(pfmlib_pmu_
+ 	pfmlib_event_attr_info_t ainfo;
+ 	char *buf;
+ 	size_t maxlen = 0, len;
+-	int i, u, n = 0, um;
++	int i, u, __attribute__((unused)) n = 0, um;
+ 	int ret, retval = PFM_SUCCESS;
+ 
+ 	pfmlib_for_each_pmu_event(pmu, i) {
+diff -up libpfm-4.13.0/perf_examples/self_smpl_multi.c.omv~ libpfm-4.13.0/perf_examples/self_smpl_multi.c
+--- libpfm-4.13.0/perf_examples/self_smpl_multi.c.omv~	2023-06-28 21:25:44.149091260 +0200
++++ libpfm-4.13.0/perf_examples/self_smpl_multi.c	2023-06-28 21:26:15.759807604 +0200
+@@ -141,7 +141,7 @@ void
+ do_cycles(void)
+ {
+ 	struct timeval start, last, now;
+-	unsigned long x, sum;
++	unsigned long x, __attribute__((unused)) sum;
+ 
+ 	gettimeofday(&start, NULL);
+ 	last = start;
+diff -up libpfm-4.13.0/pfmlib_common.c.omv~ libpfm-4.13.0/pfmlib_common.c
