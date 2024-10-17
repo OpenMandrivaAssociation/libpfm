@@ -12,7 +12,7 @@ Release: 1
 Source0: http://sourceforge.net/projects/perfmon2/files/libpfm4/%{name}-%{version}.tar.gz
 Patch0: libpfm-4.13.0-clang16.patch
 Summary: Library to encode performance events for use by perf
-URL: http://perfmon2.sourceforge.net/
+URL: https://perfmon2.sourceforge.net/
 License: MIT
 Group: System/Libraries
 BuildRequires: python
